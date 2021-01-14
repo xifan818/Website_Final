@@ -1,0 +1,509 @@
+//Colors
+$color-yellow: #FFEB83
+$color-lightYellow: #FFDB8F
+$color-orange: #FF8A49
+$color-darkGrey: #2e2e2e
+$color-white: #fff
+$color-steak: #59150E
+$color-lightSteak: #98392F
+
+//breakpoint
+$break-mobile: 576px
+$break-tablet: 768px
+$break-desktop: 992px
+$break-largeDesktop: 1200px
+
+=fz($s,$ls,$lh)
+	font-size: $s
+    letter-spacing: $ls
+    line-height: $lh
+
+@font-face 
+  font-family: 'FakePearl-Regular'
+  src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2"), url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff")
+
+
+
+*
+    // border: 1px solid black
+    font-family: 'FakePearl-Regular'
+
+::selection 
+    background: $color-lightSteak
+    color: $color-white
+
+.navbar
+    position: relative
+    height: 3.75em
+    z-index: 1
+    overflow: hidden
+    background-color: $color-darkGrey
+    @media screen and (max-width: $break-mobile) 
+        height: 2.5em
+   
+    .navbar-brand
+        color: $color-white
+        +fz(2.25em,0.25em,0)
+        margin-left: 10%
+        @media screen and (max-width: $break-desktop)
+            margin-top: -10px
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.5em
+        
+    .navbar-collapse
+        .navbar-nav
+            margin-right: 50px
+            .nav-link
+                color: $color-white
+                margin: 1em
+                white-space:nowrap
+
+                
+            .nav-link:hover
+                color: $color-yellow
+        
+
+.carousel
+    position: relative
+    // margin-top: -70px
+    z-index: 0
+    
+
+    .carousel-indicators
+        position: absolute
+
+    .carousel-inner
+        position: relative
+        top: 0
+        width: 100%
+        .carousel-item
+            // border: 1px solid black
+            @media screen and (max-width: $break-desktop) 
+                height: 600px
+            img
+                    transform: scale(1.5)
+            @media screen and (max-width: $break-tablet) 
+                height: 600px
+            img
+                    transform: scale(1.8)
+            @media screen and (max-width: $break-mobile) 
+                height: 350px
+                img
+                    transform: scale(2)
+
+    .carousel-control-prev, .carousel-control-next
+        @media screen and (max-width: $break-mobile) 
+            display: none
+    .header_content
+        position: absolute
+        left: 10%
+        top: 25%
+        z-index: 3
+        color: $color-white
+        @media screen and (max-width: $break-desktop) 
+            top: 20%   
+        @media screen and (max-width: $break-tablet) 
+            top: 20%
+        @media screen and (max-width: $break-mobile) 
+            top: 25%
+            left: 5%
+            // margin-left: 5%
+        .slogan
+            font-family: 'FakePearl-Regular'
+            font-weight: 800
+            +fz(6em,0.1em,0)
+            @media screen and (max-width: $break-desktop) 
+                font-size: 3em
+            @media screen and (max-width: $break-tablet) 
+                font-size: 2em
+            @media screen and (max-width: $break-mobile) 
+                font-size: 1.5em
+                letter-spacing: 0.2em
+                // display: none
+            
+            
+        .subSlogan
+            font-size: 2em
+            letter-spacing: 0.2em
+            left: 10%
+            @media screen and (max-width: $break-desktop) 
+                font-size: 1.5em
+            @media screen and (max-width: $break-tablet) 
+                font-size: 1em
+            
+            
+
+        .button
+            position: absolute
+            display: flex
+            justify-content: center
+            align-content: center
+            margin-top: 5%
+            z-index: 3
+            // border: 1px solid black
+            @media screen and (max-width: $break-tablet) 
+                margin-left: 10%
+            @media screen and (max-width: $break-mobile) 
+                flex-direction: column
+                margin-top: 15%
+    
+            
+            
+            .btn-link
+                background-color: $color-yellow
+                width: 200px
+                height: 45px
+                
+                border: 1px solid black
+                margin-right: 8%
+                transition: all 0.6s
+                display: flex
+                justify-content: center
+                @media screen and (max-width: $break-tablet) 
+                    width: 120px
+                    height: 40px
+    
+                @media screen and (max-width: $break-mobile) 
+                    display: none
+                    width: 120px
+                    height: 35px
+                    margin-top: 10px
+                    font-size: 0.8em
+                h5
+                    color: $color-steak
+                    font-weight: 600
+                    word-break: keep-all
+                    margin-top: 3px 
+
+
+                
+                
+                img
+                    width: 2em
+                    height: 2em
+                    padding: 5px
+                
+    
+        
+            .btn-link:hover 
+                background: rgba(0, 0, 0, 0)
+                border: 1px solid $color-yellow
+                color: $color-yellow
+                h5
+                    color: $color-yellow
+    
+.content1
+    width: 100%
+    text-align: center
+    margin-top: 5%
+    @media screen and (max-width: $break-tablet)
+        margin-top: -15%
+    
+    
+    .content1-title
+        font-size: 2.25em
+        font-weight: 900
+        color: $color-steak
+        @media screen and (max-width: $break-tablet)
+            font-size: 1.8em
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.2em
+    
+    .content1-content
+        display: flex
+        justify-content: center
+        align-content: center
+        position: relative
+        padding: 0 10% 
+        margin-top: 3%
+        height: 500px
+        @media screen and (max-width: $break-desktop) 
+            padding: 20%
+            flex-direction: column
+            height: 1800px
+            margin-top: -15%
+        @media screen and (max-width: $break-tablet) 
+            padding: 15%
+            flex-direction: column
+            height: 1800px
+            margin-top: -15%
+        @media screen and (max-width: $break-mobile) 
+            padding: 10%
+            height: 1000px
+            margin-top: -5%
+        
+        .content1-content-card
+            position: relative
+            height: 400px
+            overflow: hidden
+            margin: 0 4%
+            border-radius: 10px
+            @media screen and (max-width: $break-desktop) 
+                height: 600px
+                margin: 5% 
+                overflow: hidden
+            @media screen and (max-width: $break-tablet) 
+                height: 600px
+                margin: 5% 
+                overflow: hidden
+            @media screen and (max-width: $break-mobile) 
+                height: 200px
+        
+                
+            
+            .content1-content-card-img
+                cursor: pointer
+                transition: all 0.6s
+                @media screen and (max-width: $break-desktop) 
+                    transform: scale(1.2)
+            .content1-content-text
+                font-size: 18px
+                position: absolute
+                top: 15%
+                text-align: left
+                padding: 10%
+                color: $color-yellow
+                display: none  
+                transition:  0.6s
+                
+
+        .content1-content-card:hover
+            
+            .content1-content-card-img
+                transform: scale(1.2)
+                filter: grayscale(100%)
+                @media screen and (max-width: $break-desktop) 
+                    transform: scale(1.4)
+            .content1-content-text
+                display: block   
+    .flex-1
+        flex: 1
+
+.conteant2
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 100%
+    height: 700px
+    overflow: hidden
+    margin-top: 5%
+    // border: 1px solid black
+    @media screen and (max-width: $break-tablet) 
+        flex-direction: column
+        height: 1150px
+    @media screen and (max-width: $break-mobile) 
+        height: 800px
+    .content2-test
+        display: flex
+        justify-content: center
+        align-content: center
+        flex-direction: column
+        margin-top: 2%
+        width: 45%
+        // border: 1px solid black
+        @media screen and (max-width: $break-tablet) 
+            width: 100%
+            height: 450px
+        @media screen and (max-width: $break-mobile) 
+            height: 250px
+        
+        .content2-title
+            // border: 1px solid black
+            text-align: center
+            color: $color-steak
+            font-weight: 700
+            font-size: 2.25em
+            @media screen and (max-width: $break-tablet) 
+                font-size: 1.6em
+        .content2-content
+            // border: 1px solid black
+            display: flex
+            justify-content: space-evenly
+            align-content: center
+            flex-wrap: wrap
+            .content2-content-p
+                // border: 1px solid black
+                text-align: center
+                margin-top: 5%
+                h4
+                    font-size: 24px
+                    font-weight: 600
+                    color: $color-lightSteak
+                    margin-top: 5%
+                    @media screen and (max-width: $break-tablet) 
+                        font-size: 1.2em
+                    @media screen and (max-width: $break-mobile) 
+                        font-size: 1em
+                p
+                    font-size: 18px
+                    color: $color-orange
+                    @media screen and (max-width: $break-tablet) 
+                        font-size: 0.8em
+                    @media screen and (max-width: $break-mobile) 
+                        font-size: 0.6em
+            img
+                // border: 1px solid black
+                width: 70px
+                height: 70px
+                @media screen and (max-width: $break-mobile) 
+                    width: 50px
+                    height: 50px
+        
+    .content2-img
+        width: 50%
+        // overflow: hidden
+        // border: 1px solid black
+        @media screen and (max-width: $break-tablet) 
+            width: 100%
+            height: 750px
+            overflow: hidden
+            margin-top: 10%
+        @media screen and (max-width: $break-mobile) 
+            height: 450px
+        img
+            transform: scale(2)
+            transform: translateY(-30%)
+
+.conteant3
+    display: flex
+    justify-content: center
+    align-content: center
+    width: 100%
+    height: 700px
+    overflow: hidden
+    // border: 1px solid black
+    @media screen and (max-width: $break-tablet) 
+        flex-direction: column-reverse
+        height: 1150px
+    @media screen and (max-width: $break-mobile) 
+        height: 800px
+    .content3-img
+        width: 55%
+        overflow: hidden
+        // border: 1px solid black
+        @media screen and (max-width: $break-tablet) 
+            width: 100%
+            height: 750px
+            margin-top: 10%
+            overflow: hidden
+        @media screen and (max-width: $break-mobile) 
+            height: 450px
+        img
+            transform: scale(2)
+            transform: translateY(-30%)
+            @media screen and (max-width: $break-tablet) 
+                transform: scale(3)
+       
+    .content3-test
+        display: flex
+        justify-content: center
+        align-content: center
+        flex-direction: column
+        margin-top: 2%
+        width: 45%
+        // border: 1px solid black
+        @media screen and (max-width: $break-tablet) 
+            width: 100%
+            height: 400px
+        @media screen and (max-width: $break-mobile) 
+            height: 250px
+        
+       
+        .content3-title
+            // border: 1px solid black
+            text-align: center
+            color: $color-steak
+            font-weight: 700
+            font-size: 2.25em
+            @media screen and (max-width: $break-tablet) 
+                font-size: 1.6em
+        .content3-content
+            // border: 1px solid black
+            display: flex
+            justify-content: space-evenly
+            align-content: center
+            flex-wrap: wrap
+            .content3-content-p
+                // border: 1px solid black
+                text-align: center
+                margin-top: 5%
+                h4
+                    font-size: 24px
+                    font-weight: 600
+                    color: $color-lightSteak
+                    margin-top: 5%
+                    @media screen and (max-width: $break-tablet) 
+                        font-size: 1.2em
+                    @media screen and (max-width: $break-mobile) 
+                        font-size: 1em
+                p
+                    font-size: 18px
+                    color: $color-orange
+                    @media screen and (max-width: $break-tablet) 
+                        font-size: 0.8em
+                    @media screen and (max-width: $break-mobile) 
+                        font-size: 0.6em
+            img
+                // border: 1px solid black
+                width: 70px
+                height: 70px
+                @media screen and (max-width: $break-mobile) 
+                    width: 50px
+                    height: 50px
+            
+        
+    
+
+
+.footer
+    text-align: center
+    background-color: $color-darkGrey
+    height: 250px
+    text-decoration: none
+    padding: 2%
+    @media screen and (max-width: $break-tablet) 
+        height: 200px
+    @media screen and (max-width: $break-mobile) 
+        height: 280px
+    .footer-navbar-brand
+        color: $color-white
+        +fz(2.25em,0.25em,0)
+        text-decoration: none
+        @media screen and (max-width: $break-mobile) 
+            font-size: 1.5em
+        
+    .footer-navbar
+        display: flex
+        justify-content: center
+        align-content: center
+        margin-top: 1%
+        @media screen and (max-width: $break-mobile) 
+            flex-direction: column
+            font-size: 1em
+            
+            
+        
+        .footer-nav-item
+            color: $color-white
+            @media screen and (max-width: $break-mobile) 
+                font-size: 0.6em
+                
+        .footer-nav-item:hover
+            color: $color-yellow
+    .icon
+        display: inline-flex
+        margin: 5px
+        a
+            margin: 0.5em
+
+
+
+    
+
+
+
+
+
+
+  
+        

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/loginstyle.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/7372ebdf2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+    <title>登入</title>
+</head>
+
+<body>
+    <div class="content" id="content">
+        <div class="form-content sign-up-content">
+            <form action="#" method="get">
+                <h1>創立賬號</h1>
+                <div class="social-content">
+                    <a href="https://www.facebook.com" class="social"><i class="fab fa-facebook fa-x10"></i> </a>
+                    <a href="https://www.instagram.com" class="social"><i class="fab fa-instagram fa-x10"></i> </a>
+                    <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                        class="social"><i class="fab fa-google fa-x10"></i> </a>
+                </div>
+                <span>
+                    <p> 或者填入註冊賬號</p>
+                </span>
+                <label for="name"></label><input aria-required="" placeholder="名字" id="name" type="text" />
+                <label for="email"></label><input aria-required="" placeholder="電郵" type="text number">
+                <label for="pass"></label><input aria-required="" input type="password" onclick="myFunction()"
+                    placeholder="密碼" id="myInput" type="text number" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <div class="btn"><button>注冊</button></div>
+            </form>
+        </div>
+        <div class="form-content sign-in-content">
+            <form action="#" method="get">
+                <h1>登入賬號</h1>
+                <div class="social-content">
+                    <a href="https://www.facebook.com" class="social"><i class="fab fa-facebook fa-x5"></i> </a>
+                    <a href="https://www.instagram.com" class="social"><i class="fab fa-instagram fa-x5"></i> </a>
+                    <a href="https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+                        class="social"><i class="fab fa-google fa-x5"></i> </a>
+                </div>
+                <span>
+                    <p>或者輸入詳細登入賬號</p>
+                </span>
+                <label for="email"></label><input aria-required="" placeholder="電郵" type="text number">
+                <label for="pass"></label><input aria-required="" input type="password" placeholder="密碼"
+                    onclick="myFunction()" id="myInput" type="text number"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                <a href="#">忘記密碼了嗎？</a>
+                <div class="btn"><button>登入</button></div>
+            </form>
+        </div>
+
+
+
+        <div class="overlay-content">
+            <div class="overlay">
+                <div class="overlay-roll overlay-left">
+                    <h1>歡迎回來</h1>
+                    <p>在這裏，每一天都是星期天</p>
+                    <div class="btn"><button id="signIn">登入</button></div>
+                </div>
+                <div class="overlay-right overlay-roll">
+                    <h1>歡迎加入</h1>
+                    <p>想吃可是想要有更多優惠？
+                        <br>
+                        加入我們吧 就可以領取優惠卷
+                    </p>
+                    <div class="btn"><button id="signUp">注冊</button></div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <script src="js/loginscript.js"></script>
+
+</body>
+
+</html>
